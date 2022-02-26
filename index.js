@@ -18,3 +18,13 @@ const fs = require('fs');
         console.error(err);
     console.log("JSON DOSYASI BAŞARILI BİR ŞEKİLDE OLUŞTURULDU.")
     }) 
+
+//Veriyi Okuma-fs.readFile('okunacak dosya adı','encode',callback)
+
+fs.readFile('employees.json','utf8',(err, data) => {
+    if(err)
+        console.error(err);
+    console.log(data)
+    console.log('Dosya Başarılı Bir Şekilde Okundu')
+}) 
+
