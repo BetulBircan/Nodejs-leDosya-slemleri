@@ -28,3 +28,9 @@ fs.readFile('employees.json','utf8',(err, data) => {
     console.log('Dosya Başarılı Bir Şekilde Okundu')
 }) 
 
+//Veri Güncelleme-fs.appendFile('güncellenecek dosya adı','eklenecek olan veri',callback)
+
+ fs.appendFile('employees.json','\n{"name": "Employee 2 Name", "salary": 3000}',(err)=>{
+         if(err) console.log('Bir Hata ile Karşılaşıldı.')
+       console.log('Dosya güncellendi.')
+}) 
