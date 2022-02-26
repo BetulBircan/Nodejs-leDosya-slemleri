@@ -34,3 +34,11 @@ fs.readFile('employees.json','utf8',(err, data) => {
          if(err) console.log('Bir Hata ile Karşılaşıldı.')
        console.log('Dosya güncellendi.')
 }) 
+
+//Dosya Silme-fs.unlink('silinecek dosya adı',callback)
+
+fs.unlink('employees.json',err => {
+    if(err)
+        console.log(err)
+    console.log('Dosya Silindi.') 
+    })
